@@ -1,8 +1,11 @@
-import { Box, Grid, Typography } from '@mui/material';
+'use client';
+import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 
-export const HomeHero = () => {
+export const Hero = () => {
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
+
   return (
     <Grid
       container
@@ -13,23 +16,23 @@ export const HomeHero = () => {
           sx={{
             backgroundColor: '#B6CCC7',
             //height: '100%',
-            py: '60px',
-            px: '40px',
+            py: mdUp ? '60px' : '10px',
+            px: mdUp ? '40px' : '20px',
             borderBottomRightRadius: '200px',
           }}
         >
           <Typography
-            variant='h1'
+            variant={mdUp ? 'h1' : 'h4'}
             color='#4A8175'
           >
             EquilibrApp
           </Typography>
-          <Typography variant='h1'>tu bienestar</Typography>
-          <Typography variant='h1'>personalizado</Typography>
-          <Typography variant='h1'>
+          <Typography variant={mdUp ? 'h1' : 'h4'}>tu bienestar</Typography>
+          <Typography variant={mdUp ? 'h1' : 'h4'}>personalizado</Typography>
+          <Typography variant={mdUp ? 'h1' : 'h4'}>
             con{' '}
             <Typography
-              variant='h1'
+              variant={mdUp ? 'h1' : 'h4'}
               component={'span'}
               color='#4A8175'
             >
@@ -37,8 +40,8 @@ export const HomeHero = () => {
             </Typography>
           </Typography>
           <Typography
-            variant='h6'
-            width={400}
+            variant={mdUp ? 'h6' : 'subtitle1'}
+            width={mdUp ? 400 : 300}
           >
             Descubre planes de nutrición, rutinas de ejercicio, meditaciones guiadas y más, creados por IA para ayudarte
             a alcanzar tu equilibrio ideal y vivir mejor.
@@ -55,9 +58,9 @@ export const HomeHero = () => {
           <Image
             src='assets/images/equilibrapp-hero.svg'
             alt='hero'
-            width={550}
-            height={550}
-            style={{ borderRadius: '20px' }}
+            width={mdUp ? 550 : 225}
+            height={mdUp ? 550 : 225}
+            //style={{ borderRadius: '20px' }}
           />
         </Box>
       </Grid>

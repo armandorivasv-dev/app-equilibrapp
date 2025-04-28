@@ -1,11 +1,11 @@
-import { HomeHero } from '@/sections/home/home-hero';
-import { HomeTools } from '@/sections/home/home-tools';
+import { Hero } from '@/sections/home/hero';
+import { Tools } from '@/sections/home/tools';
 
 export default function Home() {
   return (
     <main>
-      <HomeHero />
-      <HomeTools />
+      <Hero />
+      <Tools />
     </main>
   );
 }

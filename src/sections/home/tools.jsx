@@ -1,5 +1,7 @@
-import { Box, Button, Grid, Typography } from '@mui/material';
+'use client';
+import { Box, Button, Grid, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const dataTools = [
@@ -8,52 +10,54 @@ const dataTools = [
     description:
       'Planes de nutrición personalizados Recibe un plan de comidas semanal adaptado a tu edad, peso, objetivos y género, generado por IA para una alimentación saludable y deliciosa. ',
     image: '/assets/images/nutricional-icon-equilibrapp.png',
-    link: '/plan-nutricional',
+    link: '/plan-nutricional-inteligente',
   },
   {
     title: 'Rutina de Ejercicio Personalizada',
     description:
       'Obtén un plan de entrenamiento semanal para casa, ajustado a tu nivel, metas, tiempo y equipo disponible, diseñado para ponerte en forma eficazmente.',
     image: '/assets/images/ejercicio-icon-equilibrapp.png',
-    link: '/rutina-ejercicio',
+    link: '/rutina-ejercicio-personalizada',
   },
+  // {
+  //   title: 'Guía de Meditación a Medida',
+  //   description:
+  //     'Genera guiones de meditación guiada según tu estado de ánimo, tiempo y enfoque preferido (estrés, calma, concentración) para encontrar tu paz interior.',
+  //   image: '/assets/images/meditacion-icon-equilibrapp.png',
+  //   link: '/guia-meditacion-medida',
+  // },
   {
-    title: 'Guía de Meditación a Medida',
-    description:
-      'Genera guiones de meditación guiada según tu estado de ánimo, tiempo y enfoque preferido (estrés, calma, concentración) para encontrar tu paz interior.',
-    image: '/assets/images/meditacion-icon-equilibrapp.png',
-    link: '/meditacion',
-  },
-  {
-    title: 'Listado de Afirmaciones Positivas',
+    title: 'Potentes Afirmaciones Positivas',
     description:
       'Crea listas de afirmaciones enfocadas en tus áreas de crecimiento (confianza, gratitud, motivación) para fortalecer tu mentalidad día a día.',
     image: '/assets/images/afirmaciones-icon-equilibrapp.png',
-    link: '/meditacion',
+    link: '/potentes-afirmaciones-positivas',
   },
   {
-    title: 'Inspiración para tu Diario Personal',
+    title: 'Reflexiones para tu Diario Personal',
     description:
       'Descubre preguntas y temas de reflexión sobre autoconocimiento, metas o emociones, ideales para enriquecer tu práctica diaria de journaling.',
     image: '/assets/images/reflexion-icon-equilibrapp.png',
-    link: '/meditacion',
+    link: '/reflexiones-diario-personal',
   },
 ];
 
-export const HomeTools = () => {
+export const Tools = () => {
+  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
   return (
     <Grid
       container
-      mt={10}
+      mt={mdUp ? 10 : 2}
+      mb={mdUp ? 10 : 2}
     >
       <Grid size={{ xs: 12, md: 12 }}>
         <Typography
-          variant='h1'
+          variant={mdUp ? 'h1' : 'h4'}
           textAlign={'center'}
         >
           Herramientas que{' '}
           <Typography
-            variant='h1'
+            variant={mdUp ? 'h1' : 'h4'}
             component={'span'}
             color='#4A8175'
           >
@@ -62,7 +66,7 @@ export const HomeTools = () => {
           te ofrece
         </Typography>
         <Typography
-          variant='h6'
+          variant={mdUp ? 'h6' : 'subtitle1'}
           textAlign={'center'}
           mt={2}
         >
@@ -73,7 +77,7 @@ export const HomeTools = () => {
         container
         size={{ xs: 12, md: 12 }}
         spacing={4}
-        padding={4}
+        padding={mdUp ? 4 : 2}
       >
         {dataTools.map((tool, index) => (
           <Grid
@@ -100,11 +104,11 @@ export const HomeTools = () => {
               <Image
                 src={tool.image}
                 alt={tool.title}
-                width={100}
-                height={100}
+                width={mdUp ? 100 : 80}
+                height={mdUp ? 100 : 80}
               />
               <Typography
-                variant='h4'
+                variant={mdUp ? 'h4' : 'h5'}
                 textAlign={'center'}
                 maxWidth={400}
                 color='white'
@@ -113,33 +117,34 @@ export const HomeTools = () => {
                 {tool.title}
               </Typography>
               <Typography
-                variant='h6'
-                minHeight={125}
+                variant={mdUp ? 'h6' : 'subtitle1'}
+                minHeight={150}
                 textAlign={'center'}
                 color='white'
               >
                 {tool.description}
               </Typography>
-              <Button
-                variant='contained'
-                color='#4A8175'
-                size='large'
-                sx={{
-                  mt: 2,
-                  py: 1.5,
-                  px: 4,
-                  backgroundColor: 'white',
-                  fontSize: '1.2rem',
-                  color: '#4A8175',
-                  '&:hover': {
-                    backgroundColor: '#4A8175',
-                    color: 'white',
-                  },
-                }}
-                href={tool.link}
-              >
-                Probar
-              </Button>
+              <Link href={tool.link}>
+                <Button
+                  variant='contained'
+                  color='#4A8175'
+                  size={mdUp ? 'large' : 'medium '}
+                  sx={{
+                    mt: 2,
+                    py: 1.5,
+                    px: 4,
+                    backgroundColor: 'white',
+                    fontSize: '1.2rem',
+                    color: '#4A8175',
+                    '&:hover': {
+                      backgroundColor: '#4A8175',
+                      color: 'white',
+                    },
+                  }}
+                >
+                  Probar
+                </Button>
+              </Link>
             </Box>
           </Grid>
         ))}

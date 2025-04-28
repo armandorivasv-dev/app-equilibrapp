@@ -12,7 +12,7 @@ function Copyright() {
     <Button
       variant='text'
       size='large'
-      sx={{ mb: '4vh', color: 'black', textTransform: 'lowercase' }}
+      sx={{ pb: 5, color: 'black', textTransform: 'lowercase' }}
       href='https://www.armandorivasv.dev/'
       target='_blank'
       rel='noopener noreferrer'
@@ -31,8 +31,7 @@ export const Footer = () => {
       direction={'column'}
       justifyContent='center'
       alignItems='center'
-      marginTop={5}
-      padding={5}
+      sx={{ mt: 'auto', pt: 5, backgroundColor: '#B6CCC7' }}
     >
       <Grid
         container
@@ -68,39 +67,6 @@ export const Footer = () => {
       >
         <Copyright />
       </Grid>
-      {/* <Grid
-        size={{ xs: 12, md: 10 }}
-        container
-        justifyContent='center'
-      >
-        <Typography
-          variant='h2'
-          color={color}
-        >
-          Tecnologías
-        </Typography>
-      </Grid>
-      <Grid
-        size={{ xs: 12, md: 10 }}
-        container
-        justifyContent={'center'}
-        alignItems={'center'}
-        marginTop={4}
-      >
-        {dataSkills.map((skill, index) => (
-          <Grid
-            key={index}
-            size={{ xs: 12, md: 2 }}
-          >
-            <Typography
-              variant='h2'
-              textAlign='center'
-            >
-              {skill.description}
-            </Typography>
-          </Grid>
-        ))}
-      </Grid> */}
     </Grid>
   );
 };
