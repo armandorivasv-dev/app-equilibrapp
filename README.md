@@ -61,7 +61,7 @@ Crea preguntas y temas de reflexión para journaling basados en:
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/armandorivasv-dev/equilibrapp.git
+git clone https://github.com/armandorivasv-dev/equilibrapp-webapp.git
 cd equilibrapp
 ```
 
