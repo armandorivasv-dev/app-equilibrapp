@@ -1,6 +1,11 @@
 import { Hero } from '@/sections/common/hero';
 import { Form } from '@/sections/smart-nutritional-plan/form';
 
+export const metadata = {
+  title: 'EquilibrApp - Plan Nutricional Inteligente',
+  description: 'Alcanza el equilibrio en tu vida con herramientas creadas con IA.',
+};
+
 export default function Home() {
   return (
     <main>

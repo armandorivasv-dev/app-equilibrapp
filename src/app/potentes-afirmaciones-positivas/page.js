@@ -1,6 +1,11 @@
 import { Hero } from '@/sections/common/hero';
 import { Form } from '@/sections/powerful-positive-affirmations/form';
 
+export const metadata = {
+  title: 'EquilibrApp - Potentes Afirmaciones Positivas',
+  description: 'Alcanza el equilibrio en tu vida con herramientas creadas con IA.',
+};
+
 export default function Home() {
   return (
     <main>

@@ -220,21 +220,14 @@ export const Form = () => {
             )}
 
             {/* Para desarrollo: mostrar datos de ejemplo si no hay datos reales */}
-            {/* {!data && (
+            {!data && (
               <Box marginTop={4}>
-                <Typography
-                  variant='subtitle2'
-                  color='textSecondary'
-                  sx={{ mb: 2, mx: mdUp ? 4 : 2 }}
-                >
-                  Vista previa con datos de ejemplo (solo visible en desarrollo):
-                </Typography>
                 <List
                   data={dataFake}
                   values={values}
                 />
               </Box>
-            )} */}
+            )}
 
             {/* <pre>{JSON.stringify(values, null, 2)}</pre>
             <pre>{JSON.stringify(data, null, 2)}</pre> */}

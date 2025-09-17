@@ -1,6 +1,11 @@
 import { Hero } from '@/sections/common/hero';
 import { Form } from '@/sections/personalized-exercise-routime/form';
 
+export const metadata = {
+  title: 'EquilibrApp - Rutina de Ejercicio Personalizada',
+  description: 'Alcanza el equilibrio en tu vida con herramientas creadas con IA.',
+};
+
 export default function Home() {
   return (
     <main>

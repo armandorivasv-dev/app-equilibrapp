@@ -27,7 +27,7 @@ export default function List(props) {
           data.map((item, index) => (
             <Grid
               size={{ xs: 12, sm: 6, md: 4 }}
-              key={item.day}
+              key={index}
             >
               <Paper
                 elevation={3}

@@ -4,9 +4,8 @@ import { Footer } from '@/sections/footer';
 import { customTheme } from '@/theme/get-custom-theme';
 
 export const metadata = {
-  title: 'Armando Rivas V | Portafolio',
-  description:
-    'Desarrollo websites y aplicaciones web a medida, optimizados para ofrecer una experiencia rápida, atractiva y eficiente.',
+  title: 'EquilibrApp - Home',
+  description: 'Alcanza el equilibrio en tu vida con herramientas creadas con IA.',
 };
 
 export default function RootLayout({ children }) {

@@ -290,21 +290,14 @@ export const Form = () => {
             )}
 
             {/* Para desarrollo: mostrar datos de ejemplo si no hay datos reales */}
-            {/* {!data && !loading && process.env.NODE_ENV === 'development' && (
+            {!data && !loading && process.env.NODE_ENV === 'development' && (
               <Box marginTop={4}>
-                <Typography
-                  variant='subtitle2'
-                  color='textSecondary'
-                  sx={{ mb: 2, mx: mdUp ? 4 : 2 }}
-                >
-                  Vista previa con datos de ejemplo (solo visible en desarrollo):
-                </Typography>
                 <List
                   data={dataFake}
                   values={values}
                 />
               </Box>
-            )} */}
+            )}
 
             {/* Comentado el debug de datos */}
             {/*
