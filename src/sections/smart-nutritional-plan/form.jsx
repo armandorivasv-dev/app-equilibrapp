@@ -220,14 +220,14 @@ export const Form = () => {
             )}
 
             {/* Para desarrollo: mostrar datos de ejemplo si no hay datos reales */}
-            {!data && (
+            {/* {!data && (
               <Box marginTop={4}>
                 <List
                   data={dataFake}
                   values={values}
                 />
               </Box>
-            )}
+            )} */}
 
             {/* <pre>{JSON.stringify(values, null, 2)}</pre>
             <pre>{JSON.stringify(data, null, 2)}</pre> */}
